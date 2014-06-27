@@ -29,8 +29,8 @@ MODELMAP = {
   "tp-link-tl-wr941n-nd"   => { :make => "TP-Link", :model => "TL-WR941" },
   "tp-link-tl-wr1043n-nd"  => { :make => "TP-Link", :model => "TL-WR1043" },
 
-  "d-link-dir-615 "  => { :make => "D-Link", :model => "D-Link DIR-615" },
-  "d-link-dir-825 "  => { :make => "D-Link", :model => "D-Link DIR-825" },
+  "d-link-dir-615"  => { :make => "D-Link", :model => "D-Link DIR-615" },
+  "d-link-dir-825"  => { :make => "D-Link", :model => "D-Link DIR-825" },
 }
 
 module Jekyll
