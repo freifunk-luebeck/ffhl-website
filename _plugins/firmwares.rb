@@ -3,9 +3,9 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)(?:-rev)?-([\w-]+)).bin$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)-([\w-]+)).bin$/
 FIRMWARE_BASE = "http://luebeck.freifunk.net/firmware/stable/"
-HWREV_REGEX = /^(.+)-v(\d+)$/
+HWREV_REGEX = /^(.+?)(?:-rev)?-(\w\d)$/
 
 MODELMAP = {
   "ubiquiti-bullet-m"        => { :make => "Ubiquiti", :model => "Bullet M, Nanostation Loco M" },
@@ -105,6 +105,7 @@ module Jekyll
           fw.basename = m[1]
           fw.version = m[3]
           fw.model = m[4]
+
 
           fw.model.match(HWREV_REGEX) do |m|
             fw.model = m[1]
