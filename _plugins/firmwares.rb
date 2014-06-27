@@ -3,7 +3,7 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)-([\w-]+)).bin$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)(?:-rev)?-([\w-]+)).bin$/
 FIRMWARE_BASE = "http://luebeck.freifunk.net/firmware/stable/"
 HWREV_REGEX = /^(.+)-v(\d+)$/
 
@@ -25,8 +25,12 @@ MODELMAP = {
   "tp-link-tl-wr741n-nd"   => { :make => "TP-Link", :model => "TL-WR741" },
   "tp-link-tl-wr841n-nd"   => { :make => "TP-Link", :model => "TL-WR841" },
   "tp-link-tl-wr842n-nd"   => { :make => "TP-Link", :model => "TL-WR842" },
+  "tp-link-tl-wr901n-nd"   => { :make => "TP-Link", :model => "TL-WR941" },
   "tp-link-tl-wr941n-nd"   => { :make => "TP-Link", :model => "TL-WR941" },
   "tp-link-tl-wr1043n-nd"  => { :make => "TP-Link", :model => "TL-WR1043" },
+
+  "d-link-dir-615 "  => { :make => "D-Link", :model => "D-Link DIR-615" },
+  "d-link-dir-825 "  => { :make => "D-Link", :model => "D-Link DIR-825" },
 }
 
 module Jekyll
