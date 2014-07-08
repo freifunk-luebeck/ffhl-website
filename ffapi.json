@@ -49,7 +49,7 @@
             "domainname" : "ffhl."
          },
          {
-            "domainname" : "7.d.d.3.0.c.f.f.f.e.d.f.ip6.arpa",
+            "domainname" : "7.d.d.3.0.c.f.f.f.e.d.f.ip6.arpa.",
             "nameserver" : [
                "fdef:ffc0:3dd7::a01",
                "fdef:ffc0:3dd7::c01",
