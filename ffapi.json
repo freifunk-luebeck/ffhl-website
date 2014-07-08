@@ -1,39 +1,81 @@
 {
-  "name": "Freifunk Lübeck",
-  "url": "https://luebeck.freifunk.net/",
-  "state": {
-    "lastchange": 1374226369
-  },
-  "location": {
-    "city": "Lübeck",
-    "lat": 53.869722,
-    "lon": 10.686389
-  },
-  "contact": {
-    "email": "info@luebeck.freifunk.net",
-    "irc": "irc://hackint/%23ffhl",
-    "ml": "freifunk.luebeck@asta.uni-luebeck.de ",
-    "phone": "meute@sip.ffhl"
-  },
-  "techDetails": {
-    "firmware": {
-      "url": "http://luebeck.freifunk.net/mitmachen.html"
-    },
-    "networks": {
-      "ipv6": [
-        {
-          "prefix": "fdef:ffc0:3dd7::/48"
-        }
+   "name" : "Freifunk Lübeck",
+   "url" : "https://luebeck.freifunk.net",
+   "nodeMaps" : [
+      {
+         "technicalType" : "ffmap",
+         "interval" : "1min",
+         "mapType" : "geographical",
+         "url" : "http://luebeck.freifunk.net/map/"
+      }
+   ],
+   "techDetails" : {
+      "networks" : {
+         "ipv6" : [
+            {
+               "network" : "fdef:ffc0:3dd7::/48"
+            },
+            {
+               "network" : "2001:bf7:110::/44"
+            }
+         ],
+         "ipv4" : [
+            {
+               "network" : "10.130.0.0/16"
+            }
+         ]
+      },
+      "routing" : [
+         "batman-adv"
       ],
-      "ipv4": [
-        {
-          "network": "10.130.0.0/16"
-        }
+      "legals" : [
+         "vpnnational",
+         "vpninternational"
+      ],
+      "firmware" : {
+         "url" : "http://luebeck.freifunk.net/mitmachen.html",
+         "name" : "lff"
+      },
+      "updatemode" : [
+         "autoupdate"
+      ],
+      "dns" : [
+         {
+            "nameserver" : [
+               "fdef:ffc0:3dd7::a01",
+               "fdef:ffc0:3dd7::c01",
+               "fdef:ffc0:3dd7::e01"
+            ],
+            "domainname" : "ffhl."
+         },
+         {
+            "domainname" : "7.d.d.3.0.c.f.f.f.e.d.f.ip6.arpa",
+            "nameserver" : [
+               "fdef:ffc0:3dd7::a01",
+               "fdef:ffc0:3dd7::c01",
+               "fdef:ffc0:3dd7::e01"
+            ]
+         }
       ]
-    },
-    "routing": "batman-adv",
-    "updatemode": "manual",
-    "vpn": "fastd"
-  },
-  "api": "0.1"
+   },
+   "state" : {
+      "lastchange" : "2014-07-08T18:10:54.038Z",
+      "nodes" : 276,
+      "focus" : [
+         "infrastructure/backbone"
+      ]
+   },
+   "api" : "0.4.1",
+   "contact" : {
+      "email" : "info@luebeck.freifunk.net",
+      "irc" : "irc://hackint/#ffhl",
+      "phone" : "meute@sip.ffhl, nbsp@sip.ffhl",
+      "ml" : "freifunk.luebeck@asta.uni-luebeck.de"
+   },
+   "location" : {
+      "country" : "DE",
+      "city" : "Lübeck",
+      "lat" : 53.869722,
+      "lon" : 10.686389
+   }
 }
