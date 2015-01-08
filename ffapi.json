@@ -34,7 +34,7 @@
       ],
       "firmware" : {
          "url" : "http://luebeck.freifunk.net/mitmachen.html",
-         "name" : "lff"
+         "name" : "gluon"
       },
       "updatemode" : [
          "autoupdate"
