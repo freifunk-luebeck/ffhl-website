@@ -3,9 +3,9 @@ require 'uri'
 require 'nokogiri'
 require 'pp'
 
-FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)-([\w-]+)).bin$/
+FIRMWARE_REGEX = /^gluon-((\w+)-([\d.]+)-([.\w-]+)).bin$/
 FIRMWARE_BASE = "http://luebeck.freifunk.net/firmware/0.6/"
-HWREV_REGEX = /^(.+?)(?:-rev)?-(\w\d)$/
+HWREV_REGEX = /^(.+?)(?:(?:-rev)?-(\w\d(?:\.\d)?)?)?$/
 
 MODELMAP = {
   "buffalo-wzr-hp-ag300h-wzr-600dhp" => { :make => "Buffalo", :model => "WZR-HP-AG300H/600DHP" },
