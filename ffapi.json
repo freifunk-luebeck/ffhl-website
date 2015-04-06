@@ -6,7 +6,7 @@
          "technicalType" : "ffmap",
          "interval" : "1min",
          "mapType" : "geographical",
-         "url" : "http://luebeck.freifunk.net/map/"
+         "url" : "http://map.luebeck.freifunk.net/"
       }
    ],
    "techDetails" : {
