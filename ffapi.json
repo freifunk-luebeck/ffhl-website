@@ -6,7 +6,13 @@
          "technicalType" : "ffmap",
          "interval" : "1min",
          "mapType" : "geographical",
-         "url" : "http://map.luebeck.freifunk.net/"
+         "url" : "https://map.luebeck.freifunk.net/"
+      },
+      {
+         "technicalType" : "nodelist",
+         "interval": "1min",
+         "mapType" : "list/status",
+         "url" : "https://map.luebeck.freifunk.net/data/nodelist.json"
       }
    ],
    "techDetails" : {
@@ -33,7 +39,7 @@
          "vpninternational"
       ],
       "firmware" : {
-         "url" : "http://luebeck.freifunk.net/mitmachen.html",
+         "url" : "https://luebeck.freifunk.net/mitmachen.html",
          "name" : "gluon"
       },
       "updatemode" : [
