@@ -71,7 +71,7 @@
          "infrastructure/backbone"
       ]
    },
-   "api" : "0.4.1",
+   "api" : "0.4.7",
    "contact" : {
       "email" : "info@luebeck.freifunk.net",
       "irc" : "irc://hackint/#ffhl",
