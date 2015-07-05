@@ -192,7 +192,7 @@ module Jekyll
         nil
       end
 
-      firmwares = GROUPS.collect_concat { |group, info|
+      firmwares = Hash[GROUPS.collect_concat { |group, info|
         info[:models].collect do |model|
           basename = FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-' + sanitize_model_name(group + ' ' + model)
           label = if info[:transform_label] then
@@ -214,7 +214,7 @@ module Jekyll
            }
           ]
         end
-      }.to_h
+      }]
 
       @prefixes = firmwares.keys.sort_by { |p| p.length }.reverse
 
