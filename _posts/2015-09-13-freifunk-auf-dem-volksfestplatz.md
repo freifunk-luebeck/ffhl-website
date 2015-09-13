@@ -13,7 +13,7 @@ Von der Garage der Familie Knüfermann senden wir mit einer Ubiquiti Nanostation
 !["Bitte keine Videos und nicht downloaden!" Bewohner erstellten schnell eigene Hinweisschilder um die Qualität des Netzzuganges zu gewährleisten.]({{ site.url }}/images/volksfestplatz-schild.jpg)
 *"Bitte keine Videos und nicht downloaden!" Bewohner erstellten schnell eigene Hinweisschilder um die Qualität des Netzzuganges zu gewährleisten.*
 
-Wer einen Freifunk-Router für Flüchtlinge aufstellen kann und möchte, kann sich an [refugees@lubeck.freifunk.net][4] wenden. Mehr darüber, wie jeder helfen kann, [steht in diesem Eintrag][3]
+Wer einen Freifunk-Router für Flüchtlinge aufstellen kann und möchte, kann sich an [*refugees@luebeck.freifunk.net*][4] wenden. Mehr darüber, wie jeder helfen kann, [steht in diesem Eintrag][3]
 
 Um unsere Arbeit fortführen zu können benötigen wir allerdings finanzielle Mittel um Router und Kabel zu kaufen, daher bitten wir darum, unsere [Spendenkampagne zu unterstützen][2].
 
