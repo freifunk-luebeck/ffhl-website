@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Freifunk auf dem Volksfesplatz
+title: Freifunk auf dem Volksfestplatz
 ---
 
 Nur einen Tag nachdem die Erstaufnahmeinrichtung auf dem Volksfestplatz in Betrieb genommen wurde, gibt es dort bereits Freifunk. Die Familie Knüfermann hat nicht lange gezögert und ihren Internetanschluss geteilt um den [250 Flüchtlingen, die gestern am Volksfestplatz angekommen sind][1], und allen die dazukommen werden, Internet zur Verfügung zu stellen. Die Bewohner der Erstaufnahme haben nun die Möglichkeit mit Familien und Freunden in ihrer Heimat zu kommunizieren, an Informationen zu gelangen, Übersetzungsapps zu nutzen, um die Verständigung mit den Betreuern zu erleichtern, oder nach den turbulenten Erlebnissen mit ein wenig Unterhaltung einfach einmal abschalten zu können.
