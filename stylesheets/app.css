@@ -47,6 +47,11 @@ div.heading * {
   color: #fff;
 }
 
+.postdate {
+  text-align: right;
+  margin: 0;
+}
+
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */

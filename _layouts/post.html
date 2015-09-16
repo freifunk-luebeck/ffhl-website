@@ -5,9 +5,10 @@ layout: base
 <div class="heading">
   <div class="row">
     <div class="twelve columns">
-      <h1>{{ page.title }}
-        <span="postdate">{{ page.date | date: "%B %d, %Y" }}</span>
-      </h1>
+      <h1>{{ page.title }}</h1>
+      <p class="postdate">
+        {{ page.date | date: "%B %d, %Y" }}
+      </p>
     </div>
   </div>
 </div>
