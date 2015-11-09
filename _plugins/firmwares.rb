@@ -223,26 +223,36 @@ module Jekyll
 
       factory.each do |href|
         basename = find_prefix href
-        suffix = href[basename.length..-1]
-        info = firmwares[basename]
 
-        hwrev = info[:extract_rev].call info[:model], suffix
+        if basename then
+          suffix = href[basename.length..-1]
+          info = firmwares[basename]
 
-        fw = info[:revisions][hwrev]
-        fw.factory = FIRMWARE_BASE + "factory/" + href
-        info[:revisions][hwrev] = fw
+          hwrev = info[:extract_rev].call info[:model], suffix
+
+          fw = info[:revisions][hwrev]
+          fw.factory = FIRMWARE_BASE + "factory/" + href
+          info[:revisions][hwrev] = fw
+        else
+          $stderr.puts "WARNING: Unknown factory firmware " + href
+        end
       end
 
       sysupgrade.each do |href|
         basename = find_prefix href
-        suffix = href[basename.length..-1]
-        info = firmwares[basename]
 
-        hwrev = info[:extract_rev].call info[:model], suffix
+        if basename then
+          suffix = href[basename.length..-1]
+          info = firmwares[basename]
 
-        fw = info[:revisions][hwrev]
-        fw.sysupgrade = FIRMWARE_BASE + "sysupgrade/" + href
-        info[:revisions][hwrev] = fw
+          hwrev = info[:extract_rev].call info[:model], suffix
+
+          fw = info[:revisions][hwrev]
+          fw.sysupgrade = FIRMWARE_BASE + "sysupgrade/" + href
+          info[:revisions][hwrev] = fw
+        else
+          $stderr.puts "WARNING: Unknown sysupgrade firmware " + href
+        end
       end
 
       firmwares.delete_if { |k, v| v[:revisions].empty? }
@@ -250,7 +260,7 @@ module Jekyll
       groups = firmwares
                .collect { |k, v| v[:revisions] }
                .group_by { |revs| revs.values.first.label }
-               .collect { |k, v| [k, v.first.sort] }
+               .collect { |k, v| [k, v.first.sort_by {|x| x.first.to_s}] }
                .sort
                .group_by { |k, v| v.first[1].group }
                .to_a
