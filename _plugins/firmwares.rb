@@ -4,12 +4,26 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.7.1'
+FIRMWARE_VERSION = '0.8.4'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
 
 GROUPS = {
+  "8devices" => {
+    models: [
+      "Carambola2",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "ALFA" => {
+    models: [
+      "AP121",
+      "AP121U",
+      "Hornet UB",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "Allnet" => {
     models: [
       "ALL0315N"
@@ -18,13 +32,17 @@ GROUPS = {
   },
   "Buffalo" => {
     models: [
+      "WZR-600DHP",
+      "WZR-HP-AG300H",
       "WZR-HP-AG300H/WZR-600DHP",
+      "WZR-HP-G300NH",
       "WZR-HP-G450H",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
   "D-Link" => {
     models: [
+      "DIR-505",
       "DIR-615",
       "DIR-825",
     ],
@@ -43,14 +61,41 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "Meraki" => {
+    models: [
+      "MR12",
+      "MR16",
+      "MR62",
+      "MR66",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "NETGEAR" => {
     models: [
       "WNDR3700",
       "WNDR3800",
       "WNDR4300",
-      "WNDRMAC"
+      "WNDRMAC",
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
+  },
+  "Onion" => {
+    models: [
+      "Omega",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "OpenMesh" => {
+    models: [
+      "MR600",
+      "MR900",
+      "OM2P LC",
+      "OM2P HS",
+      "OM2P",
+      "OM5P AN",
+      "OM5P",
+    ],
+    extract_rev: lambda { |model, suffix| /((?:v\d)?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
   "TP-Link" => {
     models: [
@@ -58,12 +103,14 @@ GROUPS = {
       "CPE220",
       "CPE510",
       "CPE520",
+      "TL-MR13U",
       "TL-MR3020",
       "TL-MR3040",
       "TL-MR3220",
       "TL-MR3420",
       "TL-WA701N/ND",
       "TL-WA750RE",
+      "TL-WA7510N",
       "TL-WA801N/ND",
       "TL-WA830RE",
       "TL-WA850RE",
@@ -82,12 +129,16 @@ GROUPS = {
       "TL-WR743N/ND",
       "TL-WR841N/ND",
       "TL-WR842N/ND",
+      "TL-WR843N/ND",
+      "TL-WR940N/ND",
       "TL-WR941N/ND",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
     models: [
+      "AirGateway",
+      "AirRouter",
       "Bullet M",
       "Loco M",
       "Nanostation M",
@@ -121,12 +172,21 @@ GROUPS = {
       end
     }
   },
+  "WD" => {
+    models: [
+      "My Net N600",
+      "My Net N750",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "x86" => {
     models: [
       "Generic",
       "KVM",
       "VirtualBox",
       "VMware",
+      "XEN",
+      "64",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -265,7 +325,7 @@ module Jekyll
       groups = firmwares
                .collect { |k, v| v[:revisions] }
                .group_by { |revs| revs.values.first.label }
-               .collect { |k, v| [k, v.first.sort_by {|x| x.first.to_s}] }
+               .collect { |k, v| [k, v.first.sort_by {|x| x.first.to_s.scan(/[0-9]+|[^0-9]+/).map { |s| [s.to_i, s] }}] }
                .sort
                .group_by { |k, v| v.first[1].group }
                .to_a
