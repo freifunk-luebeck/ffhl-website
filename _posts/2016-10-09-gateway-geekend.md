@@ -11,7 +11,7 @@ title: Gateway Geekend
 
 ![Something is Wrong with the Internet]({{ site.url }}/images/duty_calls-geekend.png){: .center-img }
 
-<div style="coler:gray; font-size: 80%; text-align:center;">(<a href="https://creativecommons.org/licenses/by-nc/2.5/">CC-BY-ND</a>, original by <a href="https://www.xkcd.com/386/">xkcd</a>)</div>
+<div style="coler:gray; font-size: 80%; text-align:center;">(<a href="https://creativecommons.org/licenses/by-nc/2.5/">CC-BY-NC</a>, original by <a href="https://www.xkcd.com/386/">xkcd</a>)</div>
 
 ***Was ist ein Geekend?***
 
