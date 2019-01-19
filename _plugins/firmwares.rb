@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.8.4'
+FIRMWARE_VERSION = '0.9.5'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
@@ -16,11 +16,13 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
-  "ALFA" => {
+  "ALFA Network" => {
     models: [
       "AP121",
       "AP121U",
       "Hornet UB",
+      "N2 / N5",
+      "Tube2H",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -36,6 +38,7 @@ GROUPS = {
       "WZR-HP-AG300H",
       "WZR-HP-AG300H/WZR-600DHP",
       "WZR-HP-G300NH",
+      "WZR-HP-G300NH2",
       "WZR-HP-G450H",
     ],
     extract_rev: lambda { |model, suffix| nil },
@@ -47,6 +50,12 @@ GROUPS = {
       "DIR-825",
     ],
     extract_rev: lambda { |model, suffix| /^-rev-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1].upcase },
+  },
+  "GL" => {
+    models: [
+      "AR150",
+    ],
+    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "GL-iNet" => {
     models: [
@@ -89,6 +98,7 @@ GROUPS = {
     models: [
       "MR600",
       "MR900",
+      "MR1750",
       "OM2P LC",
       "OM2P HS",
       "OM2P",
@@ -97,8 +107,17 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /((?:v\d)?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
+  "Raspberry" => {
+    models: [
+      "Pi",
+      "Pi 2",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "TP-Link" => {
     models: [
+      "Archer C5",
+      "Archer C7",
       "CPE210",
       "CPE220",
       "CPE510",
@@ -131,6 +150,7 @@ GROUPS = {
       "TL-WR842N/ND",
       "TL-WR843N/ND",
       "TL-WR940N/ND",
+      "TL-WR940N",
       "TL-WR941N/ND",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
@@ -141,6 +161,7 @@ GROUPS = {
       "AirRouter",
       "Bullet M",
       "Loco M",
+      "Nanostation Loco M",
       "Nanostation M",
       "Picostation M",
       "Rocket M",
