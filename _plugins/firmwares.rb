@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.9.6'
+FIRMWARE_VERSION = '0.10-1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
@@ -32,6 +32,13 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "AVM" => {
+    models: [
+      "FRITZ!Box 4020",
+      "FRITZ!WLAN Repeater 450E",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "Buffalo" => {
     models: [
       "WZR-600DHP",
@@ -54,6 +61,8 @@ GROUPS = {
   "GL" => {
     models: [
       "AR150",
+      "AR300M",
+      "AR750",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
@@ -63,6 +72,12 @@ GROUPS = {
       "6416A",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+  },
+  "Lemaker" => {
+    models: [
+      "Banana Pi",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "Linksys" => {
     models: [
@@ -88,6 +103,12 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
   },
+  "Ocedo" => {
+    models: [
+      "Koala",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "Onion" => {
     models: [
       "Omega",
@@ -96,6 +117,8 @@ GROUPS = {
   },
   "OpenMesh" => {
     models: [
+      "A40",
+      "A60",
       "MR600",
       "MR900",
       "MR1750",
@@ -122,12 +145,15 @@ GROUPS = {
       "CPE220",
       "CPE510",
       "CPE520",
+      "RE450",
       "TL-MR13U",
       "TL-MR3020",
       "TL-MR3040",
       "TL-MR3220",
       "TL-MR3420",
       "TL-WA701N/ND",
+      "TL-WA7210N",
+      "TL-WA730RE",
       "TL-WA750RE",
       "TL-WA7510N",
       "TL-WA801N/ND",
@@ -140,20 +166,24 @@ GROUPS = {
       "TL-WDR4300",
       "TL-WDR4900",
       "TL-WR1043N/ND",
+      "TL-WR1043N",
       "TL-WR2543N/ND",
       "TL-WR703N",
       "TL-WR710N",
       "TL-WR740N/ND",
       "TL-WR741N/ND",
       "TL-WR743N/ND",
+      "TL-WR810N",
       "TL-WR841N/ND",
       "TL-WR842N/ND",
       "TL-WR843N/ND",
       "TL-WR940N/ND",
       "TL-WR940N",
       "TL-WR941N/ND",
+      "WBS210",
+      "WBS510",
     ],
-    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| rev = /^(?:-(?!sysupgrade)(.+?))?(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "Ubiquiti" => {
     models: [
@@ -193,6 +223,13 @@ GROUPS = {
       end
     }
   },
+  "Ubnt" => {
+    models: [
+      "ERX",
+      "ERX-SFP",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "WD" => {
     models: [
       "My Net N600",
@@ -203,11 +240,19 @@ GROUPS = {
   "x86" => {
     models: [
       "Generic",
+      "Geode",
       "KVM",
       "VirtualBox",
       "VMware",
       "XEN",
       "64",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "Zyxel" => {
+    models: [
+      "nbg6616",
+      "nbg6716",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -241,7 +286,8 @@ module Jekyll
         def site_payload
           result = super
           result["site"]["firmwares"] = self.firmwares
-          result["site"]["firmware_version"] = FIRMWARE_VERSION
+#          result["site"]["firmware_version"] = FIRMWARE_VERSION
+          result["site"]["firmware_version"] = FIRMWARE_VERSION.gsub(/-[0-9]$/,'')
           result
         end
       end
