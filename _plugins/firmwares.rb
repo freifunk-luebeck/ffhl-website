@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.10-1'
+FIRMWARE_VERSION = '0.10.1-1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
@@ -35,6 +35,7 @@ GROUPS = {
   "AVM" => {
     models: [
       "FRITZ!Box 4020",
+      "FRITZ!WLAN Repeater 300E",
       "FRITZ!WLAN Repeater 450E",
     ],
     extract_rev: lambda { |model, suffix| nil },
@@ -58,11 +59,11 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| /^-rev-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1].upcase },
   },
-  "GL" => {
+  "GL.iNet" => {
     models: [
-      "AR150",
-      "AR300M",
-      "AR750",
+      "GL-AR150",
+      "GL-AR300M",
+      "GL-AR750",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
