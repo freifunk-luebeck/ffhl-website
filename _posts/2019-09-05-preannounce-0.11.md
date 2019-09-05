@@ -3,9 +3,7 @@ layout: post
 title: Firmware 0.11 Vorankündigung - Takeoff und ETA
 ---
 
-Moin moin,
-
-so, die ganzen Updates bisher waren größtenteils ein Selbstläufer.
+Die bisherigen Updates waren größtenteils ein "Selbstläufer".
 Nun kommt der etwas spannendere und kniffligere Teil: Ein
 Protokoll-Wechsel (IBSS/Adhoc-Mode -> 802.11s). Dieser ist
 notwendig, damit wir endlich die neuesten Geräte unterstützen
@@ -68,5 +66,3 @@ wären z.B. die Graphen "Nodes" und "Mesh links" hier dann
 interessant:
 
 [https://monitor.luebeck.freifunk.net/statistik/d/gfLSBciWz/basic-stats?orgId=1&refresh=1m&from=now-21d&to=now](https://monitor.luebeck.freifunk.net/statistik/d/gfLSBciWz/basic-stats?orgId=1&refresh=1m&from=now-21d&to=now)
-
-Gruß, Linus
