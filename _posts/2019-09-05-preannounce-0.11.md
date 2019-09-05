@@ -16,6 +16,11 @@ gleichzeitig wechseln müssen. Um zu vermeiden, dass ausschließlich
 per WLAN-Mesh angebundene Geräte von der Kommunikation nicht
 abgeschnitten werden.
 
+![Ablauf für den IBSS nach 802.11s Wechsel - Symbolbild (Mondlandung)]({{ site.url }}/images/Apollo-11-mission-profile.png)
+
+*Ablauf für den IBSS nach 802.11s Wechsel - Symbolbild*
+
+
 "Zündung" geht ab Freitag los: Ab dann, innerhalb von drei Tagen,
 wird die scharf gestellte Firmware ausgerollt und auf die
 Freifunk-Router eingespielt.
