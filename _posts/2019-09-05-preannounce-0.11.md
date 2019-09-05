@@ -43,6 +43,19 @@ Wenn euer Freifunk-Router das Update nicht bis zum Freitag, den
 aus war) und ausschließlich per Mesh angebunden war/ist, werdet ihr
 diesen manuell updaten müssen.
 
+---
+
+* **Freitag, 6.9. 21:30:**
+  * 0.11 Firmware Freischaltung
+* **Samstag/Sonntag/Montag, 7.-9. September, je 04:00 - 05:00:**
+  * 0.11 Firmware Rollout
+* **Nach Montag, 9.9., ab 21:30:**
+  * 0.11 Firmware Rollout, ohne Zeitfenster
+* **Freitag, 13.9., 10:10:**
+  * IBSS/Adhoc-Mode -> 802.11s Wechsel
+
+---
+
 Wer den ganzen spannenden Takeoff live miterleben möchte, kann
 sich zum Beispiel diese Statisk anschauen:
 
