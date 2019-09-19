@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.10.1-1'
+FIRMWARE_VERSION = '0.11-1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
