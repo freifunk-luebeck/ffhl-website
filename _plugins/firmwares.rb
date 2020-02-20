@@ -16,6 +16,12 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "A5" => {
+    models: [
+      "v11",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "ALFA Network" => {
     models: [
       "AP121",
@@ -35,6 +41,7 @@ GROUPS = {
   "AVM" => {
     models: [
       "FRITZ!Box 4020",
+      "FRITZ!Box 4040",
       "FRITZ!WLAN Repeater 300E",
       "FRITZ!WLAN Repeater 450E",
     ],
@@ -56,14 +63,24 @@ GROUPS = {
       "DIR-505",
       "DIR-615",
       "DIR-825",
+      "DIR-860L",
     ],
-    extract_rev: lambda { |model, suffix| /^-rev-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1].upcase },
+    extract_rev: lambda { |model, suffix| /^-(((rev-|)|b).+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+  },
+  "GL" => {
+    models: [
+      "MT300A",
+      "MT300N",
+      "MT750",
+    ],
+    extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
   "GL.iNet" => {
     models: [
       "GL-AR150",
       "GL-AR300M",
       "GL-AR750",
+      "GL-B1300",
     ],
     extract_rev: lambda { |model, suffix| /^-(.+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
   },
@@ -97,12 +114,24 @@ GROUPS = {
   },
   "NETGEAR" => {
     models: [
+      "EX6100",
+      "EX6150",
+      "R6120",
       "WNDR3700",
       "WNDR3800",
       "WNDR4300",
       "WNDRMAC",
     ],
     extract_rev: lambda { |model, suffix| /^(.*?)(?:-sysupgrade)?\.[^.]+$/.match(suffix)[1].sub(/^$/, 'v1') },
+  },
+  "Nexx" => {
+    models: [
+      "WT3020AD",
+      "WT3020F",
+      "WT3020H",
+      "WT3020 8M",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
   },
   "Ocedo" => {
     models: [
@@ -119,7 +148,9 @@ GROUPS = {
   "OpenMesh" => {
     models: [
       "A40",
+      "A42",
       "A60",
+      "A62",
       "MR600",
       "MR900",
       "MR1750",
@@ -140,6 +171,10 @@ GROUPS = {
   },
   "TP-Link" => {
     models: [
+      "Archer C50",
+      "Archer C58",
+      "Archer C59",
+      "Archer C60",
       "Archer C5",
       "Archer C7",
       "CPE210",
@@ -176,6 +211,7 @@ GROUPS = {
       "TL-WR743N/ND",
       "TL-WR810N",
       "TL-WR841N/ND",
+      "TL-WR841N",
       "TL-WR842N/ND",
       "TL-WR843N/ND",
       "TL-WR940N/ND",
@@ -231,6 +267,13 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "VoCore" => {
+    models: [
+      "",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+
   "WD" => {
     models: [
       "My Net N600",
@@ -250,10 +293,19 @@ GROUPS = {
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
+  "ZBT" => {
+    models: [
+      "WG3526 16M",
+      "WG3526 32M",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
   "Zyxel" => {
     models: [
       "nbg6616",
+      "nbg6617",
       "nbg6716",
+      "wre6606",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
