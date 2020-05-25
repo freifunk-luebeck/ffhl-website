@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pp'
 
 FIRMWARE_PREFIX = 'gluon-ffhl'
-FIRMWARE_VERSION = '0.11.1-1'
+FIRMWARE_VERSION = '0.12.0-1'
 
 FIRMWARE_REGEX = Regexp.new('^' + FIRMWARE_PREFIX + '-' + FIRMWARE_VERSION + '-')
 FIRMWARE_BASE = 'http://luebeck.freifunk.net/firmware/' + FIRMWARE_VERSION + '/'
@@ -13,12 +13,20 @@ GROUPS = {
   "8devices" => {
     models: [
       "Carambola2",
+      "jalapeno",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
   "A5" => {
     models: [
       "v11",
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "Aerohive" => {
+    models: [
+      "HiveAP-121",
+      "HiveAP-330",
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -35,6 +43,12 @@ GROUPS = {
   "Allnet" => {
     models: [
       "ALL0315N"
+    ],
+    extract_rev: lambda { |model, suffix| nil },
+  },
+  "Asus" => {
+    models: [
+      "RT-AC57U"
     ],
     extract_rev: lambda { |model, suffix| nil },
   },
@@ -60,12 +74,13 @@ GROUPS = {
   },
   "D-Link" => {
     models: [
+      "DAP-1330",
       "DIR-505",
       "DIR-615",
       "DIR-825",
       "DIR-860L",
     ],
-    extract_rev: lambda { |model, suffix| /^-(((rev-|)|b).+?)(?:-sysupgrade)?\.bin$/.match(suffix)[1] },
+    extract_rev: lambda { |model, suffix| /^-(((rev-|)|b).+?)(?:-sysupgrade)?\.(bin|img)$/.match(suffix)[1] },
   },
   "GL" => {
     models: [
@@ -210,6 +225,7 @@ GROUPS = {
       "TL-WR741N/ND",
       "TL-WR743N/ND",
       "TL-WR810N",
+      "TL-WR840N",
       "TL-WR841N/ND",
       "TL-WR841N",
       "TL-WR842N/ND",
