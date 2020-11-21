@@ -25,7 +25,7 @@
          "Public Free Wifi",
          "Free internet access"
       ],
-      "lastchange": "2020-08-05T12:18:23.355Z"
+      "lastchange": "2020-11-21T18:24:08.518Z"
    },
    "services": [
       {
@@ -39,6 +39,14 @@
          "serviceDescription": "Grafan statistics",
          "externalUri": "https://monitor.luebeck.freifunk.net/",
          "internalUri": "https://monitor.luebeck.freifunk.net/"
+      }
+   ],
+   "feeds": [
+      {
+         "name": "Blog",
+         "category": "blog",
+         "type": "rss",
+         "url": "https://luebeck.freifunk.net/feed.xml"
       }
    ],
    "nodeMaps": [
