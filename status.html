@@ -1,10 +1,13 @@
 <script src="//stat.ripe.net/widgets/widget_api.js"></script>
 <div class="statwdgtauto">
-	<script>ripestat.init("as-path-length", { "resource": "AS201173" })
-	</script>
+	<script>ripestat.init("routing-status", { "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
 </div>
-<script src="//stat.ripe.net/widgets/widget_api.js"></script>
 <div class="statwdgtauto">
-	<script>ripestat.init("routing-status", { "resource": "AS201173" })
-	</script>
+	<script>ripestat.init("as-path-length", { "sort_by": "geo", "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
+</div>
+<div class="statwdgtauto">
+	<script>ripestat.init("routing-history", { "min_peers": 0, "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
+</div>
+<div class="statwdgtauto">
+	<script>ripestat.init("visibility", { "resource": "AS201173" })</script>
 </div>
