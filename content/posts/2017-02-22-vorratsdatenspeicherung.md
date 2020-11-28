@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Die Vorratsdatenspeicherung kommt
+date: 2017-02-22
 ---
 
 ***Ab dem 1.7. tritt die Vorratsdatenspeicherung in Kraft. Freifunknetze in Deutschland sind direkt betroffen.***
 
 <!--more-->
 
-![Freifunk schwarz-weiß]({{ site.url }}/images/freifunk-schwarz.png)
+![Freifunk schwarz-weiß](/images/freifunk-schwarz.png)
 
 Ab dem 1. Juli 2017 werden wir uns in der folgenden, misslichen Lage
 befinden:

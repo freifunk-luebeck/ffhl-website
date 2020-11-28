@@ -2,6 +2,7 @@
 layout: post
 title: Karte und Graph umgezogen
 teaser: Bitte Links und Browser-Lesezeichen aktualisieren.
+date: 2013-03-11
 ---
 
 Die neuen Adressen für Karte und Graph sind:

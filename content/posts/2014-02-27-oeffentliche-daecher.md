@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Die Stadt ist dabei und funkt ab jetzt frei! :)
+date: 2014-02-27
 ---
 
 Heute Abend zur späten Stunde hat die lübecker Bürgerschaft im Rathaus beschlossen, uns die Dächer öffentlicher Gebäude für Freifunk zur Verfügung zu stellen. Wir freuen uns riesig und sagen danke an alle, die das bis hierhin ermöglicht haben!

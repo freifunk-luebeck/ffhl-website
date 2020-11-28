@@ -2,6 +2,7 @@
 layout: post
 title: Spende für FFHL!
 teaser: Spendensammlung jetzt über betterplace.org
+date: 2014-05-21
 ---
 
 Mit Hilfe des Chaotikums werden seit längerer Zeit finanzielle Hilfen

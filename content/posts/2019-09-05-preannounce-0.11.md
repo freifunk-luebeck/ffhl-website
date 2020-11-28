@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Firmware 0.11 Vorankündigung - Takeoff und ETA
+date: 2019-09-05
 ---
 
 Die bisherigen Updates waren größtenteils ein "Selbstläufer".
@@ -14,7 +15,7 @@ gleichzeitig wechseln müssen. Um zu vermeiden, dass ausschließlich
 per WLAN-Mesh angebundene Geräte von der Kommunikation nicht
 abgeschnitten werden.
 
-![Ablauf für den IBSS nach 802.11s Wechsel - Symbolbild (Mondlandung)]({{ site.url }}/images/Apollo-11-mission-profile.png)
+![Ablauf für den IBSS nach 802.11s Wechsel - Symbolbild (Mondlandung)](/images/Apollo-11-mission-profile.png)
 
 *Ablauf für den IBSS nach 802.11s Wechsel - Symbolbild*
 

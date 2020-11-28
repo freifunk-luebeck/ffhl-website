@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Flüchtlinge willkommen heißen
+date: 2015-09-12
 ---
 Aus dem Urlaub schicken wir gerne ein Postkarte. Doch in ein Kriesengebiet funktioniert das leider nicht.
 

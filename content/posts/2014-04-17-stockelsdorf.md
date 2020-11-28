@@ -2,6 +2,7 @@
 layout: post
 title: Netzausbau in Stockelsdorf
 teaser: Hauptausschuss der Gemeinde Stockelsdorf gibt grünes Licht für Pilotprojekt
+date: 2014-04-17
 ---
 
 Am 15.04.2014 hat der Hauptausschuss der Gemeinde Stockelsdorf grünes List für das Pilotprojekt 'Freifunkausbau Stockelsdorf' gegeben.

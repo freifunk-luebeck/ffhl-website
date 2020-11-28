@@ -1,0 +1,32 @@
+<!-- stats -->
+<a href="https://monitor.luebeck.freifunk.net/d/gfLSBciWz/basic-stats">
+    <img src="https://monitor.luebeck.freifunk.net/render/d-solo/gfLSBciWz/basic-stats?orgId=1&refresh=1m&from=now-1d&to=now&panelId=10&width=200&height=120&theme=light" />
+</a>
+<a href="https://monitor.luebeck.freifunk.net/d/gfLSBciWz/basic-stats">
+    <img src="https://monitor.luebeck.freifunk.net/render/d-solo/gfLSBciWz/basic-stats?orgId=1&refresh=1m&from=now-1d&to=now&panelId=11&width=200&height=120&theme=light" />
+</a>
+
+<img src="//monitor.luebeck.freifunk.net/render/d-solo/qXS4dH0Mk/alerts?orgId=1&from=now-24h&to=now&panelId=2&width=400&height=400&theme=light">
+
+<h2>Mesh</h2>
+<img src="//monitor.luebeck.freifunk.net/render/d-solo/gfLSBciWz/basic-stats?orgId=1&from=now-24h&to=now&panelId=46&width=800&height=300&theme=light"><img>
+
+<h2>Network</h2>
+<img src="//monitor.luebeck.freifunk.net/render/d-solo/gfLSBciWz/basic-stats?orgId=1&from=now-24h&to=now&panelId=38&width=1000&height=300&theme=light"><img>
+
+<h2>Peering</h2>
+<img src="//monitor.luebeck.freifunk.net/render/d-solo/Y4zOyFpGz/bird-internet-routing-daemon?orgId=1&from=now-24h&to=now&var-instance=kaisertor&var-range=10m&panelId=4&width=1000&height=300&theme=light">
+
+<script src="//stat.ripe.net/widgets/widget_api.js"></script>
+<div class="statwdgtauto">
+    <script>ripestat.init("routing-status", { "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
+</div>
+<div class="statwdgtauto">
+    <script>ripestat.init("as-path-length", { "sort_by": "geo", "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
+</div>
+<div class="statwdgtauto">
+    <script>ripestat.init("routing-history", { "min_peers": 0, "resource": "AS201173" }, null, { "disable": ["controls"] })</script>
+</div>
+<div class="statwdgtauto">
+    <script>ripestat.init("visibility", { "resource": "AS201173" })</script>
+</div>

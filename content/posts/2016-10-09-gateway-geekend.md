@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gateway Geekend
+date: 2016-10-09
 ---
 
 ***Samstag, den 22.10. sowie Sonntag, den 23.10. wird es ein Gateway Geekend im [Nobreakspace][1] geben. Beginn um 10:30 mit Brunch.***
@@ -9,7 +10,7 @@ title: Gateway Geekend
 
 <p><div style="color:gray; font-size: 150%; text-align:center;"><em>Duty Calls</em></div></p>
 
-![Something is Wrong with the Internet]({{ site.url }}/images/duty_calls-geekend.png){: .center-img }
+![Something is Wrong with the Internet](/images/duty_calls-geekend.png)
 
 <div style="coler:gray; font-size: 80%; text-align:center;">(<a href="https://creativecommons.org/licenses/by-nc/2.5/">CC-BY-NC</a>, original by <a href="https://www.xkcd.com/386/">xkcd</a>)</div>
 

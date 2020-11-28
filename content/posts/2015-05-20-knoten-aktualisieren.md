@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bitte aktualisiert eure Knoten!
+date: 2015-05-20
 ---
 
 Es gibt noch immer viele Knoten im Lübecker Freifunk, die noch mit

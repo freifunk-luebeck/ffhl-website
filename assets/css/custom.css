@@ -1,0 +1,15 @@
+:root {
+    /* Colors */
+    --primary: #dc0067; /* #ffb400; */
+    --primary-dark: #ffa000;
+    --primary-light: #ffb400; /* #050504; */
+    --primary-text: #212121;
+    --secondary-text: #333333;
+    --accent: #009ee0;
+    --divider: #dc0067;
+    --white: #fdfdfd;
+
+}
+.footer {
+    background-color: var(--primary);
+}

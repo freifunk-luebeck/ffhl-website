@@ -2,6 +2,7 @@
 layout: post
 title: Release Party, 28.3.2014
 teaser: Einladung zur Release-Party unserer neuen Firmware
+date: 2014-03-14
 ---
 
 # Release-Party, 28.3.2014

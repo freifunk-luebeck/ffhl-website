@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Funkwellen und Ostseewellen
+date: 2016-06-09
 ---
 
 Wenn am Donnerstag die Kruzenshtern und Passat beim „Treffen der Flying P-Liner“ aufeinandertreffen, dann ist auch Freifunk dabei.

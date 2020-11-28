@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Freifunk in allen Flüchtlingsunterkünften?
+date: 2016-08-04
 ---
 
 ***Was würde es kosten alle Flüchtlingsunterkünfte in Lübeck online zu bringen? Eine detaillierte Liste der geschätzten Ausgaben für jede Unterkunft wurde der Stadt übergeben.***
 
 <!--more-->
 
-![Freifunk für Flüchtlingsunterkünfte in Lübeck?]({{ site.url }}/images/freifunk-titel-600x314.jpg)
+![Freifunk für Flüchtlingsunterkünfte in Lübeck?](/images/freifunk-titel-600x314.jpg)
 
 „Der Bürgermeister möge zur Februarsitzung 2016 der Bürgerschaft berichten, wie kostenloser WLAN-Zugang für alle Flüchtlingsgemeinschaftsunterkünfte realisiert werden kann und was es ggf. kostet.“ So steht es im Protokoll der 19. Bürgerschaftssitzung vom 28. Januar 2016. Ende April hat sich die Stadt mit Freifunkern getroffen. Daraufhin haben Freifunker sich auf den Weg gemacht und alle Flüchtlingsgemeinschaftsunterkünfte der Stadt Lübeck besucht, um die Kosten abzuschätzen. Herausgekommen ist eine Liste, welche detailliert auflistet, in welcher Unterkunft welche Kosten entstehen. Berücksichtigt wurden dabei nur rund 30 Gemeinschaftsunterkünfte in denen die Geflüchteten nicht auf eigenen Namen einen Internetanschluss anmelden könnten. Diese Liste wurde jetzt der Stadt übergeben.
  

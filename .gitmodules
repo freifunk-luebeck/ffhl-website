@@ -1,6 +1,4 @@
-[submodule "themes/hugo-terassa-theme"]
-	path = themes/hugo-terassa-theme
-	url = https://github.com/danielkvist/hugo-terrassa-theme.git
 [submodule "themes/hugo-terrassa-theme"]
 	path = themes/hugo-terrassa-theme
 	url = https://github.com/danielkvist/hugo-terrassa-theme.git
+

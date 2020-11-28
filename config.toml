@@ -1,6 +1,6 @@
 baseurl = "/"
 title = "Freifunk Lübeck"
-author = ""
+author = "Freifunk Lübeck"
 googleAnalytics = ""
 defaultContentLanguage = "de"
 paginate = 3
@@ -10,7 +10,7 @@ theme = "hugo-terrassa-theme"
 [params]
     description = "Freifunk Lübeck"
     favicon = "favicon.ico"
-    logo = ""
+    logo = "images/ffhl-logo.png"
 
 [params.hero]
     textColor = "" # Empty for default color
@@ -23,78 +23,69 @@ theme = "hugo-terrassa-theme"
 [params.separator] # Separators between sections on the home page
     show = true 
 
-[params.fa] # Font Awesome options
-    version = "5.7.2"
-    integrity = "sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+[menu]
+  [[menu.main]]
+    name = "Firmware"
+    url = "https://firmware.luebeck.freifunk.net/wizard"
+    weight = 100
+    pre = "<i class='fas fa-external-link-alt'></i>"
+  [[menu.main]]
+    name = "Wiki"
+    url = "https://wiki.luebeck.freifunk.net"
+    weight = 101
+    pre = "<i class='fas fa-external-link-alt'></i>"
+  
+  [[menu.main]]
+    name = "Map"
+    url = "https://map.luebeck.freifunk.net"
+    weight = 102
+    pre = "<i class='fas fa-external-link-alt'></i>"
 
-# [params.form] # Contact form
-#     netlify = true
-#     action = "https://formspree.io/your@email.com"
-#     method = "POST"
-#     inputNameName = "name"
-#     inputNameLabel = "Name"
-#     inputNamePlaceholder = "Your name"
-#     inputEmailName = "email"
-#     inputEmailLabel = "Email"
-#     inputEmailPlaceholder = "Your email"
-#     inputMsgName = "message"
-#     inputMsgLabel = "Write something"
-#     inputMsgLength = 750
-#     inputSubmitValue = "Send"
+  [[menu.main]]
+    name = "Statistik"
+    url = "https://monitor.luebeck.freifunk.net/"
+    weight = 103
+    pre = "<i class='fas fa-external-link-alt'></i>"
 
 [params.posts]
-    showAuthor = true
+    showAuthor = false
     showDate = true
     showTags = true
     dateFormat = "Monday, Jan, 2006"
 
 [params.contact] # Contact info
     email = "info@luebeck.freifunk.net"
-    chat = "#ffhl:matrix.org"
-    chaturl = "https://matrix.to/#/!abaEXDFMmCWEivMGJF:matrix.org?via=matrix.org&via=matrix.eclabs.de&via=toppoint.de"
-    address =  ""
+    Address = 'Nobreakspace, Fackenburger Allee 11 (23554, Lübeck)'
 
 [params.social]
-    twitter = "https://twitter.com/freifunkluebeck"
-    github = "https://github.com/freifunk-luebeck"
-    gitlab = "https://gitlab.com/freifunk-luebeck"
-    pinterest = ""
-    youtube = ""
-    linkedin = ""
-    weibo = ""
-    mastodon = ""
-    tumblr = ""
-    flickr = ""
-    "500px" = ""
-
-# [params.copy] # Copyright
-#     copy = "Impressum" # Empty for default content
-
-[privacy]
-    [privacy.googleAnalytics]
-        anonymizeIP = true
-        disable = true 
-        respectDoNotTrack = true
-        useSessionStorage = false
-    [privacy.instagram]
-        disable = true 
-        simple = false
-    [privacy.twitter]
-        disable = true 
-        enableDNT = true
-        simple = false
-    [privacy.vimeo]
-        disable = true 
-        simple = false
-    [privacy.youtube]
-        disable = true 
-        privacyEnhanced = true
+    "fab fa-twitter" = "https://twitter.com/freifunkluebeck"
+    "fab fa-git" = "https://git.luebeck.freifunk.net"
+    #"fab fa-youtube" = "https://peertube.luebeck.freifunk.net"
+    "fas fa-comments" = "https://matrix.to/#/!abaEXDFMmCWEivMGJF:matrix.org?via=matrix.org&via=matrix.eclabs.de&via=toppoint.de"
 
 [params.languageSwitcher]
     show = false 
+
+[params.copy]
+    message = "Impressum"
+    site = "impressum"
 
 [languages]
     [languages.de]
         languageName = "de"
         weight = 1
         contentDir = "content/"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

@@ -1,11 +1,11 @@
 ---
 title: "Startseite"
 description: ""
-images: ["johannes-krupinski-IohYCXACl9s-unsplash.jpg"]
+images: ["cover.jpg"]
 draft: false
 menu: main
-weight: 1
+weight: 10
 ---
 
 # Freifunk Lübeck
-## Dein freies, lokales und dezentrales Internet
+## Dein freies, lokales und dezentrales Netzwerk
